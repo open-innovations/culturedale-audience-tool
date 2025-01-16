@@ -4,7 +4,7 @@ headerExtras:
     <script defer src="/assets/js/handle-input.js" type="module"></script>
 ---
 <section>
-    <form name="input" action="/results/">
+    <form name="input" action="{{ '/results/' |> url() }}">
         <label for="postcode-input">Postcodes</label>
         <textarea id="postcode-input"
             name="postcodes"

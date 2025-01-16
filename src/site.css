@@ -1,0 +1,15 @@
+#postcode-input {
+  resize: vertical;
+}
+
+a:not([href]) {
+  border: 2px solid red;
+  display: none;
+}
+
+hex-map, .map {
+  display: block;
+  margin-inline: auto;
+  max-width: 50rem;
+  aspect-ratio: 6 / 5;
+}

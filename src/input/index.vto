@@ -1,0 +1,39 @@
+---
+title: Postcode input
+headerExtras:
+    <script defer src="/assets/js/handle-input.js" type="module"></script>
+---
+<section>
+    <form name="input" action="/results/">
+        <label for="postcode-input">Postcodes</label>
+        <textarea id="postcode-input"
+            name="postcodes"
+            rows="20"
+            autocorrect="off"
+        ></textarea>
+        <button type="submit">Submit</button>
+        <button type="reset" style="--color-link:#777;">Clear</button>
+    </form>
+</section>
+
+<article>
+    <p>
+        Enter the postcodes you have collected from your attendees in the Postcodes box, one per line.
+        You can enter duplicated postcodes. The summary will deal with this.
+    </p>
+    <pre><samp>
+        AA1 1AA
+        AB2 2AB
+        AA1 1AA
+    </samp></pre>
+    <p>
+        If you have information about counts of attendees from each postcode or booking, enter the number after the postcode, separated by a comma.
+        Any lines missing the count will be assumed to be one.
+    </p>
+    <pre><samp>
+        AA1 1AA,4
+        AB2 2AB,3
+        AA1 1AA
+    </samp></pre>
+
+</article>

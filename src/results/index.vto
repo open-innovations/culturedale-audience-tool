@@ -1,0 +1,45 @@
+---
+title: Results
+headerExtras:
+    <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="/assets/vendor/leaflet/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script defer src="/assets/js/present-results.js" type="module"></script>
+---
+<section>
+<a href="/input/">&larr; Edit postcode inputs</a>
+</section>
+
+{{ include "./_partials/downloads.vto" }}
+
+<hr>
+
+<article>
+<header>
+    <h2>Visualisations</h2>
+</header>
+
+<hex-map
+    layout="{{ "/lookup/calderdale.hexjson" |> url() }}"
+></hex-map>
+
+<div
+    id="map"
+    class="map"
+></div>
+
+</article>
+
+<hr>
+
+{{ comp.ErrorList() }}
+
+<section>
+    <header>
+        <h2>Result data</h2>
+    </header>
+    <pre><samp id="result"></samp></pre>
+</section>

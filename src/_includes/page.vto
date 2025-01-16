@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} &mdash; {{ metas.site }}</title>
+    {{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> #}}
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <link rel="stylesheet" href="/components.css">
+    <link rel="stylesheet" href="/site.css">
+    {{#- Make prefix global available #}}
+    <script>globalThis.PREFIX = "{{ '' |> url() }}";</script>
+    {{#- Add extra content to the header. Set in page data. #}}
+    {{ headerExtras -}}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">{{ metas.site }}</a>
+            <ul>
+                <li><a href="/input/">Input</a></li>
+                <li><a href="/results/">Results</a></li>
+            </ul>
+        </nav>
+    <h1>{{ fullTitle || title }}</h1>
+    </header>
+    <main>
+    {{ content }}
+    </main>
+
+    <footer>
+    
+    </footer>
+</body>
+</html>

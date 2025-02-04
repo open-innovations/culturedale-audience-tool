@@ -11,7 +11,7 @@ a:not([href]) {
 	display: none;
 }
 
-hex-map, .map {
+.oi-map-map[data-type=hex-map], .map {
 	display: block;
 	margin-inline: auto;
 	aspect-ratio: 6 / 5;

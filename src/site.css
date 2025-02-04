@@ -20,7 +20,7 @@ hex-map svg { background: var(--b7); color: var(--b7-text); }
 nav { margin-bottom: 1rem; display: flex; align-items: center; }
 .site-logo { width: 22%; }
 .site-logo img { width: 100%; }
-.site-title { text-align: left; font-size: 1.4rem; font-weight: bold; transform: rotate(-15deg)skew(-15deg); }
+.site-title { text-align: left; font-size: 1.4rem; font-weight: bold; text-transform: uppercase; }
 h1, h2, h3 { text-align: center; }
 h1 { font-size: 2.3rem; line-height: 1.2; }
 .button, button { border-radius: 4px; padding: 1rem 2rem; }

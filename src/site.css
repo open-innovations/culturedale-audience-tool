@@ -35,6 +35,7 @@ section > header { margin-bottom: 1rem; width: 100%; }
 .downloads { grid-column: 2; grid-row: 1; }
 .downloads section { position: sticky; top: 0; }
 .downloads aside { width: var(--width-card); background: var(--b7); color: var(--b7-text); padding: 1rem; }
+.downloads aside .button { display: block; text-align: center; margin-inline: auto; }
 .downloads aside, .downloads aside > * { margin-bottom: 1rem; }
 .downloads aside > *:last-child { margin-bottom: 0rem; }
 

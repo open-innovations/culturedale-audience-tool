@@ -1,5 +1,5 @@
 export default {
-	"assetPath": '/assets',
+	"assetPath": '/culturedale-audience-tool/assets',
 	"componentNamespace": 'oi',
 	"font": {
 		"family": 'Poppins,CenturyGothicStd,"Century Gothic",Arial,sans-serif',

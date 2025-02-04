@@ -3,7 +3,7 @@ title: Postcode input
 headerExtras:
     <script defer src="/assets/js/handle-input.js" type="module"></script>
 ---
-<section>
+<section class="holder padded">
     <form name="input" action="{{ '/results/' |> url() }}">
         <label for="postcode-input">Postcodes</label>
         <textarea id="postcode-input"
@@ -11,12 +11,13 @@ headerExtras:
             rows="20"
             autocorrect="off"
         ></textarea>
-        <button type="submit">Submit</button>
-        <button type="reset" style="--color-link:#777;">Clear</button>
+        <button type="submit" class="c3-bg">Submit</button>
+        <button type="reset" class="b6-bg">Clear</button>
     </form>
 </section>
 
-<article>
+<article class="holder padded">
+	<h2>Examples</h2>
     <p>
         Enter the postcodes you have collected from your attendees in the Postcodes box, one per line.
         You can enter duplicated postcodes. The summary will deal with this.
@@ -36,4 +37,9 @@ headerExtras:
         AA1 1AA
     </samp></pre>
 
+</article>
+
+<article class="holder padded">
+	<h2>Privacy</h2>
+	<p>Privacy is important. We have designed this tool so that the full postcodes are <em>not</em> sent from your browser. Instead, we lookup all postcodes within a postcode area e.g. "HX" and then work out the results for your specific postcodes entirely on your device. This preserves the privacy of individual postcodes that you enter.</p>
 </article>

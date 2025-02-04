@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} &mdash; {{ metas.site }}</title>
     {{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> #}}
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    {{#<link rel="stylesheet" href="https://unpkg.com/mvp.css">#}}
+    <link rel="stylesheet" href="/oi-basic.css">
     <link rel="stylesheet" href="/components.css">
     <link rel="stylesheet" href="/site.css">
     {{#- Make prefix global available #}}
@@ -15,21 +16,28 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">{{ metas.site }}</a>
+        <nav class="holder padded">
+			<a href="https://www.culturedale.co.uk/" class="site-logo">
+			<img src="https://cdn.prod.website-files.com/641341690b55414efd4526a9/6605a3d10a42b3f6c14b0f6c_Culturedale-1.gif" loading="lazy">
+			</a>
+            <a href="/" class="site-title">{{ metas.site }}</a>
+			<!--
             <ul>
                 <li><a href="/input/">Input</a></li>
                 <li><a href="/results/">Results</a></li>
             </ul>
+			-->
         </nav>
     <h1>{{ fullTitle || title }}</h1>
     </header>
     <main>
-    {{ content }}
+		{{ content }}
     </main>
 
     <footer>
-    
+		<section class="holder padded">
+		&copy; Open Innovations 2025 (MIT Licence)
+		</section>
     </footer>
 </body>
 </html>

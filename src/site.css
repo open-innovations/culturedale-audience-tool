@@ -1,15 +1,45 @@
+html,body { background: var(--b2); color: var(--b2-text); }
+header, main { background: var(--b8); color: var(--b8-text); }
+main { min-height: 40vh; padding-bottom: 3rem; }
+footer { padding-block: 3rem; }
 #postcode-input {
-  resize: vertical;
+	resize: vertical;
 }
 
 a:not([href]) {
-  border: 2px solid red;
-  display: none;
+	border: 2px solid red;
+	display: none;
 }
 
 hex-map, .map {
-  display: block;
-  margin-inline: auto;
-  max-width: 50rem;
-  aspect-ratio: 6 / 5;
+	display: block;
+	margin-inline: auto;
+	aspect-ratio: 6 / 5;
+}
+hex-map svg { background: var(--b7); color: var(--b7-text); }
+nav { margin-bottom: 1rem; display: flex; align-items: center; }
+.site-logo { width: 22%; }
+.site-logo img { width: 100%; }
+.site-title { text-align: left; font-size: 1.4rem; font-weight: bold; transform: rotate(-15deg)skew(-15deg); }
+h1, h2, h3 { text-align: center; }
+h1 { font-size: 2.3rem; line-height: 1.2; }
+.button, button { border-radius: 4px; padding: 1rem 2rem; }
+form { margin: auto; max-width: var(--width-card-wide); width: var(--width-card); }
+input, label, select, textarea { display: block; margin-bottom: 1rem; }
+label { font-weight: bold; }
+textarea { border: 1px solid black; padding: 1rem; border-radius: 4px; width: 100%; }
+
+section > header { margin-bottom: 1rem; width: 100%; }
+
+.results { display: grid; grid-gap: 1rem; grid-template-columns: 1fr var(--width-card); }
+.downloads { grid-column: 2; grid-row: 1; }
+.downloads section { position: sticky; top: 0; }
+.downloads aside { width: var(--width-card); background: var(--b7); color: var(--b7-text); padding: 1rem; }
+.downloads aside, .downloads aside > * { margin-bottom: 1rem; }
+.downloads aside > *:last-child { margin-bottom: 0rem; }
+
+@media only screen and (max-width: 1080px) {
+	.results { display: block; }
+	.downloads section { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: stretch; }
+	.downloads section header { width: 100%; }
 }

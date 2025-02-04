@@ -1,9 +1,8 @@
 ---
 css: |
     [data-comp=errors] {
-        border: 2px solid hsl(0 100% 40% / 1);
+        border: 2px solid var(--warning-text);
         border-radius: 4px;
-        background: hsl(0 100% 90% / 1);
         padding: 1em;
         & > * {
             margin-block: 0;
@@ -20,10 +19,10 @@ css: |
     }
 ---
 
-<aside data-comp="errors" data-error-count="0">
-<h2>Errors</h2>
-<p>
-    The following postcodes are not valid (either incorrect or outside the area covered by the tool). Please check and correct them.
-</p>
-<div></div>
+<aside data-comp="errors" data-error-count="0" class="warning">
+	<h2>Warnings</h2>
+	<p>
+		The following postcodes are not valid (either incorrect or outside the area covered by the tool). Please check and correct them.
+	</p>
+	<div></div>
 </aside>

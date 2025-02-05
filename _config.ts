@@ -33,8 +33,6 @@ site.use(esbuild({
   },
 }));
 
-site.use(basePath());
-
 {
   const root = import.meta.resolve("./").replace("file://", "");
   const lookupFiles = (await Array.fromAsync(expandGlob("./lookup/**/*json")))
@@ -48,12 +46,14 @@ site.use(basePath());
   site.copy("lookup");
 }
 
-site.copy([".css"]);
-site.copy("assets/vendor");
-
-
 // Register an HTML processor
 // https://lume.land/docs/core/processors/
 site.process([".html"], (pages) => pages.forEach(autoDependency));
+
+site.use(basePath());
+
+site.copy([".css"]);
+site.copy("assets/vendor");
+
 
 export default site;
